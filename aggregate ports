@@ -1,0 +1,34 @@
+FGT61FTK19001349 # config system virtual-switch
+
+FGT61FTK19001349 (virtual-switch) # show
+config system virtual-switch
+    edit "internal"
+        set physical-switch "sw0"
+        config port
+            edit "internal1"
+            next
+            edit "internal2"
+            next
+            edit "internal3"
+            next
+        end
+    next
+    edit "fortilink"
+        set physical-switch "sw0"
+        config port
+            edit "a"
+            next
+            edit "b"
+            next
+        end
+    next
+    edit "Sdivision"
+        set physical-switch "sw0"
+        config port
+            edit "internal4"
+            next
+            edit "internal5"
+            next
+        end
+    next
+end
